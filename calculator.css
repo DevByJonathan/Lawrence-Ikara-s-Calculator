@@ -1,0 +1,115 @@
+/* Global Reset */
+* {
+    box-sizing: border-box;
+    border: none;
+    font-family: Monospace;
+ }
+ 
+ body {
+     margin: 0;
+     background-color: rgba(0, 0, 0, 0.95);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     height: 100vh;
+     overflow: hidden;
+     padding: 10px;
+ }
+ 
+ /* Display Container */
+ .display-container {
+     width: 100%;
+     max-width: 500px;
+     height: 20vh;
+     color: white;
+     text-align: right;
+     font-size: 3rem;
+     font-weight: 400;
+     margin: 0 auto;
+     padding-top: 20px;
+     overflow: hidden;
+ }
+ 
+ .display {
+     width: 100%;
+     overflow-x: auto;
+     white-space: nowrap;
+     padding: 10px;
+ }
+ 
+ /* Button Container */
+ .button-container {
+     margin-top: 20px;
+     width: 100%;
+     max-width: 500px;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+     gap: 10px;
+     justify-content: center;
+     align-items: center;
+     padding: 10px;
+ }
+ 
+ button {
+     width: 100%;
+     aspect-ratio: 1/1;
+     border-radius: 50%;
+     font-size: 1.5rem;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+     min-width: 60px;
+ }
+ 
+ .big-btn {
+     grid-column: span 2;
+     width: 100%;
+     border-radius: 50px;
+     text-align: left;
+     padding-left: 20px;
+ }
+ 
+ /* Button Colors */
+ .n-btn {
+     background-color: rgba(255, 255, 255, 0.2);
+     color: white;
+ }
+ .o-btn {
+     color: white;
+     background-color: #BCCE54;
+ }
+ .s-btn {
+     background-color: pink;
+ }
+ 
+ /* Responsive Adjustments */
+ @media (max-width: 768px) {
+     .display-container {
+         font-size: 2.5rem;
+     }
+     .button-container {
+         grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+         gap: 8px;
+     }
+     button {
+         font-size: 1.2rem;
+         min-width: 50px;
+     }
+ }
+ 
+ @media (max-width: 480px) {
+     .display-container {
+         font-size: 2rem;
+     }
+     .button-container {
+         grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+         gap: 5px;
+     }
+     button {
+         font-size: 1rem;
+         min-width: 40px;
+     }
+ }
+ 
